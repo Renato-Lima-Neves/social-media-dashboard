@@ -1,0 +1,268 @@
+@import url("https://fonts.google.com/specimen/Inter");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #1e202a;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+span {
+  color: #8b97c6;
+}
+
+header {
+  background: #1f212e;
+}
+
+/*GRID HEADER & MAIN*/
+.grid-header,
+.grid-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+/*GRID CARD*/
+.grid-card {
+  border-radius: 0.3em;
+  margin-bottom: 2em;
+  /*ICON UP*/
+  /*ICON DOWN*/
+  /*TOP*/
+  /*GRID CARD BOTTOM*/
+}
+
+.grid-card.icon-up {
+  color: #1db489;
+  font-size: 0.75rem;
+}
+
+.grid-card.icon-down {
+  color: #dc414c;
+  font-size: 0.75rem;
+}
+
+.grid-card.top {
+  text-align: center;
+  padding: 1em;
+  border: transparent;
+  border-top: transparent solid;
+  /*FACEBOOK*/
+  /*TWITTER*/
+  /*INSTAGRAM*/
+  /*YOUTUBE*/
+  /*USER*/
+  /*SOCIAL ICON*/
+  /*FOLLOWERS*/
+}
+
+.grid-card.top.facebook {
+  border-top-color: #198ff5;
+}
+
+.grid-card.top.twitter {
+  border-top-color: #1ca0f2;
+}
+
+.grid-card.top.instagram {
+  border-top-color: orangered;
+}
+
+.grid-card.top.youtube {
+  border-top-color: #c4032a;
+}
+
+.grid-card.top-user {
+  padding: 1em 0;
+}
+
+.grid-card.top h2 {
+  font-size: 3rem;
+}
+
+.grid-card.top-social-icon {
+  padding: 1em 0;
+}
+
+.grid-card.top-followers {
+  text-transform: uppercase;
+}
+
+.grid-card.bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5em;
+  /*BOTTOM ROW*/
+}
+
+.grid-card.bottom-row h2 {
+  font-size: 2rem;
+}
+
+/*SWITCH COLORS*/
+header.light {
+  background-color: #f5f7ff;
+  color: #63687e;
+}
+
+body.light {
+  background-color: white;
+}
+
+.dark-bg {
+  background-color: #252a41;
+  color: white;
+}
+
+.dark-bg > span {
+  color: #8b97c6;
+}
+
+.white-bg {
+  background-color: #f0f2fa;
+  color: #63687e;
+}
+
+.dark-mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1em;
+}
+
+.dark-mode-p {
+  width: 45%;
+}
+
+.dark-mode-middle {
+  width: 60%;
+}
+
+/*SWITCH BTN*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(90deg, #378fe6, #3eda82);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #aeb3cb;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #aeb3cb;
+          box-shadow: 0 0 1px #aeb3cb;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 800px) {
+  /*GRID HEADER & MAIN*/
+  .grid-header,
+  .grid-main {
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 0.5em;
+  }
+  /*GRID MAIN*/
+  .grid-main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    gap: 1em 1em;
+    /*GRID MAIN TOP*/
+  }
+  .grid-main-top {
+    text-align: center;
+  }
+  /*GRID TXT BETWEEN*/
+  .grid-txt-between {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    border: none;
+  }
+}
+
+/*FOOTER*/
+.attribution {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #63687e;
+}
+
+.attribution a {
+  color: orangered;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=main.css.map */
